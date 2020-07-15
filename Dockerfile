@@ -4,8 +4,8 @@ ENV TZ=Europe/Moscow
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 RUN apt update \
-    && update-locale LANG=ru_RU.UTF-8 \
     && apt install -y language-pack-ru nodejs npm mc \
+    && update-locale LANG=ru_RU.UTF-8 \
     && npm install -g athom-cli \
     && apt autoclean -y \
     && apt autoremove -y \
