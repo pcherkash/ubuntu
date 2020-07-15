@@ -12,5 +12,5 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 ENTRYPOINT ["/tini", "--"]
 
-ENV HOME=/home/ubuntu \
+ENV HOME=/home/ \
     SHELL=/bin/bash
